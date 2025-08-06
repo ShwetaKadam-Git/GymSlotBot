@@ -8,11 +8,11 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 # Setup Chrome driver
-service = Service("D:/STUTTGART/PROJECTS/autoBook/chromedriver.exe")
+service = Service("chromedriver.exe")
 driver = webdriver.Chrome(service=service)
 
 # Step 1: Open the calendar
-calendar_url = "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ06yuRnqZ6BCkgtAJlU3dh3cWI0GINjEySTDjolrjWn3-rBAcE7MZNhSerTo7ziMJ7FSDHZ7Qwe?gv=true"
+calendar_url = "https://calendar.google.com/calendar/u/0/appointments/schedules"
 driver.get(calendar_url)
 driver.maximize_window()
 time.sleep(5)
@@ -61,20 +61,20 @@ try:
     book_button = wait.until(EC.element_to_be_clickable(
         (By.XPATH, "//button[.//span[contains(text(), 'Book')]]")
     ))
-    # First Name
+    # First Name the ID's c11, c12, c13 are specific to my Mock application form field - they may differ in the actual application
     first_name_input = wait.until(EC.visibility_of_element_located((By.ID, "c11")))
     first_name_input.clear()
-    first_name_input.send_keys("Shweta")
+    first_name_input.send_keys("Name")
 
     # Last Name
     last_name_input = wait.until(EC.visibility_of_element_located((By.ID, "c12")))
     last_name_input.clear()
-    last_name_input.send_keys("Kadam")
+    last_name_input.send_keys("Last name")
 
     # Email
     email_input = wait.until(EC.visibility_of_element_located((By.ID, "c13")))
     email_input.clear()
-    email_input.send_keys("kadamshweta11111@gmail.com")
+    email_input.send_keys("youremail@email.com")
     
     book_button.click()
 except:
