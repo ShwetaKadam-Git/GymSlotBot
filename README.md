@@ -19,10 +19,30 @@ A Python-based automation script using Selenium to book gym slots via a Google C
 - Fills in contact details in the form -first name, last name, email (For more professional use case Specific ID's to be used in order to verify against duplicate bookings)
 - Submits the booking.
 
-> ## Potential Ideas to be implemented
+---
+## 🚀 Getting Started
+```sh
+# Step 1: Clone the repository using the project's Git URL.
+git clone <GIT_URL>
+
+# Step 2: Navigate to the project directory.
+cd <YOUR_PROJECT_NAME>
+
+# Step 3: Install the necessary dependencies.
+pip install --necessary dependencies
+
+# Step 4: Execute the script
+python autoBook.py
+
+```
+---
+
+## Potential Ideas to be implemented
 > - Automating the script execution locally and log the bookings in order to track the booking so as to not book mutiple slot for the same day
 > - ⚠️ If multiple slots are booked on the same day manually, they may be deleted without prior notice (enforcement feature to be added later) or only one booking per day for a single email ID in this projects context.
 > - 📌 Incorporate special identifier such as Membership ID in the form for identification
 
 ---
+
+
 
